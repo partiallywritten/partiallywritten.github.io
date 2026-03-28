@@ -87,3 +87,8 @@ hr {
   scrollbar-width: thin;
   scrollbar-color: #884139 #512b39;
 }
+
+/* inject */
+span[inject_txt]::after {
+    content: attr(inject_txt);
+}
