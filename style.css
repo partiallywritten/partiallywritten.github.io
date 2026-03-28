@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap");
+
+/* defining the rules */
+:root {
+    --bg-color: #fbf6f2;
+    --main-text-color: #40353b;
+    /* link colors */
+    --links-color: #e55648;
+    --links-color-hover: #b43f32;
+    /* header content injection colors */
+    --h1-inj-color: #e55648;
+    --h2-inj-color: #8f4644;
+    --main-font: "Space Grotesk", sans-serif;
+}
+
+
+/* globs */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+}
+
+body {
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 10vh;
+    margin-bottom: 25vh;
+}
+
+
+/* header styles and content injection */
+h1::before {
+    content: "# ";
+    color: var(--h1-inj-color);
+}
+
+h2::before {
+    content: "## ";
+    color: var(--h2-inj-color);
+}
+
+
+/* link styles */
+a {
+    color: var(--links-color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    color: var(--links-color-hover);
+}
+
+/* ruler styles */
+hr {
+    border: none;
+    height: 0;
+    border-top: 0.1em dashed #5e4c40;
+}
+
+
+/* custom scrollbar - code stolen from google */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #373556;
+}
+::-webkit-scrollbar-thumb {
+  background: #884139;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c98c8b;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #884139 #512b39;
+}
