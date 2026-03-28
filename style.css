@@ -28,6 +28,13 @@ body {
     margin-top: 10vh;
     margin-bottom: 25vh;
 }
+/* Responsif */
+@media only screen and (max-device-width: 768px) {
+    body {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
 
 
 /* header styles and content injection */
