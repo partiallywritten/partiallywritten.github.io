@@ -4,6 +4,13 @@
 :root {
     --bg-color: #fbf6f2;
     --main-text-color: #40353b;
+    /* scrollbar colors */
+    --scrollbar-bg-color: #512b39;
+    --scrollbar-thumb-color: #884139;
+    --scrollbar-thumb-hover-color: #feb758;
+    /* selection colors */
+    --select-bg-color: #bf6b4a;
+    --select-text-color: #f4e1ce;
     /* link colors */
     --links-color: #e55648;
     --links-color-hover: #b43f32;
@@ -73,22 +80,35 @@ hr {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-  background: #373556;
+  background: var(--scrollbar-bg-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: #884139;
+  background: var(--scrollbar-thumb-color);
   transition: background 0.2s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c98c8b;
+  background: var(--scrollbar-thumb-hover-color);
 }
-
 * {
   scrollbar-width: thin;
-  scrollbar-color: #884139 #512b39;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-bg-color);
+}
+
+/* custom highlight selection */
+::selection {
+  background: var(--select-bg-color);
+  color: var(--select-text-color);
+}
+::-moz-selection {
+  background: var(--select-bg-color);
+  color: var(--select-text-color);
 }
 
 /* inject */
 span[inject_txt]::after {
     content: attr(inject_txt);
+}
+
+span[item-desc] {
+    opacity: 0.8;
 }
